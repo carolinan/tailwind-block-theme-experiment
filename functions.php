@@ -91,7 +91,7 @@ add_filter( 'render_block', function( $html, $block ) {
 		case 'core/button':
 			$html = str_replace(
 				'wp-block-button__link',
-				'yst-w-full yst-flex yst-items-center yst-justify-center yst-px-8 yst-py-3 yst-border yst-border-transparent yst-text-base yst-font-medium yst-rounded-md yst-md:py-4 yst-md:text-lg yst-md:px-10',
+				'yst-w-full yst-flex yst-items-center yst-justify-center yst-px-8 yst-py-3 yst-border yst-border-transparent yst-text-base yst-font-medium yst-rounded-md md:yst-py-4 md:yst-text-lg md:yst-px-10',
 				$html
 			);
 			break;
@@ -158,7 +158,7 @@ add_filter( 'render_block', function( $html, $block ) {
 	// if ( strpos( $html, 'yst-large-gray-p' ) ) {
 	// 	$html = yoast_block_theme_replace_class(
 	// 		[ 'yst-large-gray-p' ],
-	// 		[ 'yst-mt-3', 'yst-text-base', 'yst-text-gray-500', 'sm:yst-mt-5', 'sm:yst-text-xl', 'yst-lg:text-lg', 'xl:yst-text-xl' ],
+	// 		[ 'yst-mt-3', 'yst-text-base', 'yst-text-gray-500', 'sm:yst-mt-5', 'sm:yst-text-xl', 'lg:yst-text-lg', 'xl:yst-text-xl' ],
 	// 		$html
 	// 	);
 	// }
