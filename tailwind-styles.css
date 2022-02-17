@@ -1,0 +1,19 @@
+.is-style-yst-large-gray-p {
+	@apply yst-mt-3 yst-text-base yst-text-gray-500 sm:yst-mt-5 sm:yst-text-xl lg:yst-text-lg xl:yst-text-xl;
+}
+
+.is-style-yst-purple-rain-p {
+	@apply yst-text-base yst-font-semibold yst-text-primary-600 yst-uppercase yst-tracking-wide;
+}
+
+.is-style-yst-medium-p {
+	@apply yst-text-lg yst-leading-6 yst-font-medium yst-text-gray-900;
+}
+
+.is-style-yst-smallish-light-p {
+	@apply yst-mt-6 yst-text-gray-500;
+}
+
+.is-style-yst-rounded-border-group {
+	@apply yst-relative yst-p-8 yst-bg-white yst-border yst-border-gray-200 yst-rounded-2xl yst-shadow-sm yst-flex yst-flex-col;
+}

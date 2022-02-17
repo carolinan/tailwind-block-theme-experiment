@@ -1,0 +1,243 @@
+{
+	"version": 2,
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{
+					"slug": "primary-50",
+					"name": "Primary 50",
+					"color": "#faf4f8"
+				},
+				{
+					"slug": "primary-100",
+					"name": "Primary 100",
+					"color": "#f6eaf0"
+				},
+				{
+					"slug": "primary-200",
+					"name": "Primary 200",
+					"color": "#e8c9da"
+				},
+				{
+					"slug": "primary-300",
+					"name": "Primary 300",
+					"color": "#dba9c3"
+				},
+				{
+					"slug": "primary-400",
+					"name": "Primary 400",
+					"color": "#bf6997"
+				},
+				{
+					"slug": "primary-500",
+					"name": "Primary 500",
+					"color": "#a4286a"
+				},
+				{
+					"slug": "primary-600",
+					"name": "Primary 600",
+					"color": "#94245f"
+				},
+				{
+					"slug": "primary-700",
+					"name": "Primary 700",
+					"color": "#7b1e50"
+				},
+				{
+					"slug": "primary-800",
+					"name": "Primary 800",
+					"color": "#621840"
+				},
+				{
+					"slug": "primary-900",
+					"name": "Primary 900",
+					"color": "#501434"
+				},
+				{
+					"slug": "yoast_blue-50",
+					"name": "Yoast Blue 50",
+					"color": "#e6f1f7"
+				},
+				{
+					"slug": "yoast_blue-100",
+					"name": "Yoast Blue 100",
+					"color": "#cce3f0"
+				},
+				{
+					"slug": "yoast_blue-200",
+					"name": "Yoast Blue 200",
+					"color": "#99c8e1"
+				},
+				{
+					"slug": "yoast_blue-300",
+					"name": "Yoast Blue 300",
+					"color": "#66acd1"
+				},
+				{
+					"slug": "yoast_blue-400",
+					"name": "Yoast Blue 400",
+					"color": "#3391c2"
+				},
+				{
+					"slug": "yoast_blue-500",
+					"name": "Yoast Blue 500",
+					"color": "#0075b3"
+				},
+				{
+					"slug": "yoast_blue-600",
+					"name": "Yoast Blue 600",
+					"color": "#0069a1"
+				},
+				{
+					"slug": "yoast_blue-700",
+					"name": "Yoast Blue 700",
+					"color": "#005e8f"
+				},
+				{
+					"slug": "yoast_blue-800",
+					"name": "Yoast Blue 800",
+					"color": "#00527d"
+				},
+				{
+					"slug": "yoast_blue-900",
+					"name": "Yoast Blue 900",
+					"color": "#00466b"
+				},
+				{
+					"slug": "yoast_green-50",
+					"name": "Yoast Green 50",
+					"color": "#f1f7e9"
+				},
+				{
+					"slug": "yoast_green-100",
+					"name": "Yoast Green 100",
+					"color": "#d6e8be"
+				},
+				{
+					"slug": "yoast_green-200",
+					"name": "Yoast Green 200",
+					"color": "#bbd993"
+				},
+				{
+					"slug": "yoast_green-300",
+					"name": "Yoast Green 300",
+					"color": "#92c152"
+				},
+				{
+					"slug": "yoast_green-500",
+					"name": "Yoast Green 500",
+					"color": "#77B227"
+				},
+				{
+					"slug": "yoast_green-600",
+					"name": "Yoast Green 600",
+					"color": "#6ba023"
+				},
+				{
+					"slug": "yoast_green-700",
+					"name": "Yoast Green 700",
+					"color": "#5f8e1f"
+				},
+				{
+					"slug": "yoast_green-800",
+					"name": "Yoast Green 800",
+					"color": "#537d1b"
+				},
+				{
+					"slug": "yoast_green-900",
+					"name": "Yoast Green 900",
+					"color": "#476b17"
+				},
+				{
+					"slug": "gray-50",
+					"color": "#f9fafb",
+					"name": "Gray 50"
+				},
+				{
+					"slug": "gray-500",
+					"color": "#6b7280",
+					"name": "Gray 500"
+				}
+			],
+			"gradients": [
+				{
+					"slug": "",
+					"gradient": "",
+					"name": ""
+				}
+			]
+		},
+		"spacing": {
+			"units": ["px", "em", "%", "rem"]
+		},
+		"layout": {
+			"contentSize": "1280px",
+			"wideSize": ""
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"name": "",
+					"slug": "",
+					"fontFamily": ""
+				}
+			],
+			"fontSizes":[
+				{
+					"slug": "normal",
+					"size": "1.125rem",
+					"name": "Normal"
+				}
+			]
+		},
+		"custom": {}
+	},
+	"styles": {
+		"spacing":{
+			"blockGap": "",
+			"margin": {
+				"top": "",
+				"right": "",
+				"bottom": "",
+				"left": ""
+			}
+		},
+		"color": {
+			"background": "",
+			"text": ""
+		},
+		"typography": {
+			"fontSize": "",
+			"fontFamily": "",
+			"lineHeight": ""
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": ""
+				}
+			}
+		},
+		"blocks": {}
+	},
+	"templateParts": [
+		{
+			"name": "header",
+			"title": "Header",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"title": "Footer",
+			"area": "footer"
+		}
+	],
+	"customTemplates": [
+		{
+			"name": "",
+			"title": "",
+			"postTypes": [ "post","page" ]
+		}
+	]
+}
