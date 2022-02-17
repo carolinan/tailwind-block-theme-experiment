@@ -116,7 +116,7 @@ add_filter( 'render_block', function( $html, $block ) {
 			if ( 2 === $block['attrs']['level'] ) {
 				$html = yoast_block_theme_replace_class(
 					[],
-					[ 'yst-text-center', 'yst-text-3xl', 'yst-leading-8', 'yst-font-extrabold', 'yst-tracking-tight', 'sm:yst-text-5xl' ],
+					[ 'yst-text-3xl', 'yst-leading-8', 'yst-font-extrabold', 'yst-tracking-tight', 'sm:yst-text-5xl' ],
 					$html
 				);
 			}
@@ -189,4 +189,8 @@ register_block_style( 'core/paragraph', [
 register_block_style( 'core/group', [
 	'name'         => 'yst-rounded-border-group',
 	'label'        => __( 'Rounded-bordered', 'yoast-block-theme' ),
+] );
+register_block_style( 'core/group', [
+	'name'         => 'yst-padded-round-group',
+	'label'        => __( 'Round & padded', 'yoast-block-theme' ),
 ] );
