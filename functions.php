@@ -1,20 +1,27 @@
 <?php
+/**
+ * Functions and definitions
+ *
+ * @package Yoast\YoastBlockTheme
+ */
+
+/**
+ * Add theme support for block styles and editor style.
+ *
+ * @since 0.1.0
+ *
+ * @return void
+ */
+function yoast_block_theme_setup() {
+	add_theme_support( 'wp-block-styles' );
+	add_editor_style( './assets/css/tailwind-build.css' );
+}
+add_action( 'after_setup_theme', 'yoast_block_theme_setup' );
 
 /**
  * Enqueue scripts & styles.
  */
 function yoast_block_theme_enqueue_scripts_and_styles() {
-	/**
-	 * Add Tailwind from the play CDN.
-	 *
-	 * This is not the way to do things in a production environment.
-	 * However, for this POC it's enough to get the ball rolling.
-	 */
-	wp_enqueue_script( 'tailwind-play-cdn', 'https://cdn.tailwindcss.com' );
-
-	// Add tailwind config.
-	wp_add_inline_script( 'tailwind-play-cdn', file_get_contents( get_template_directory() . '/tailwind.config.js' ) );
-
 	// Add the default stylesheet.
 	wp_enqueue_style(
 		'yoast-block-theme-style',
@@ -22,18 +29,19 @@ function yoast_block_theme_enqueue_scripts_and_styles() {
 		[],
 		filemtime( get_template_directory() . '/style.css' ) // DEV only.
 	);
+
+	// Add tailwind CSS.
+	wp_enqueue_style(
+		'yoast-block-theme-tailwind',
+		get_template_directory_uri() . '/assets/css/tailwind-build.css',
+		[],
+		filemtime( get_template_directory() . '/assets/css/tailwind-build.css' ) // DEV only.
+	);
 }
 add_action( 'wp_enqueue_scripts', 'yoast_block_theme_enqueue_scripts_and_styles' );
-add_action( 'admin_enqueue_scripts', 'yoast_block_theme_enqueue_scripts_and_styles' );
 
-/**
- * Inject tailwind custom styles in <head>.
- */
-function yoast_block_theme_inject_tailwind_modifications() {
-	echo '<style type="text/tailwindcss">' . file_get_contents( get_template_directory() . '/tailwind-styles.css' ) . '</style>';
-}
-add_action( 'wp_head', 'yoast_block_theme_inject_tailwind_modifications' );
-add_action( 'admin_head', 'yoast_block_theme_inject_tailwind_modifications' );
+// Block styles
+require_once get_theme_file_path( 'inc/register-block-styles.php' );
 
 /**
  * A simple function to add/replace classes in elements.
@@ -133,25 +141,6 @@ add_filter( 'render_block', function( $html, $block ) {
 			break;
 	}
 
-	// Text-align: center.
-	$html = str_replace( 'has-text-align-center', 'yst-text-center', $html );
-
-	// Background-colors.
-	$html = str_replace( 'has-background', '', $html );
-	$html = preg_replace(
-		'/has-([a-z_]+-[0-9]{1,3})-background-color/i',
-		'yst-bg-$1',
-		$html
-	);
-
-	// Text-colors.
-	$html = str_replace( 'has-text-color', '', $html );
-	$html = preg_replace(
-		'/has-([a-z_]+-[0-9]{1,3})-color/i',
-		'yst-text-$1',
-		$html
-	);
-
 	/**
 	 * Replace presets classes.
 	 */
@@ -165,32 +154,3 @@ add_filter( 'render_block', function( $html, $block ) {
 
 	return $html;
 }, 10, 2 );
-
-/**
- * Register block styles.
- */
-register_block_style( 'core/paragraph', [
-	'name'         => 'yst-large-gray-p',
-	'label'        => __( 'Large gray', 'yoast-block-theme' ),
-] );
-register_block_style( 'core/paragraph', [
-	'name'         => 'yst-purple-rain-p',
-	'label'        => __( 'Purple rain caps', 'yoast-block-theme' ),
-] );
-register_block_style( 'core/paragraph', [
-	'name'         => 'yst-medium-p',
-	'label'        => __( 'Medium', 'yoast-block-theme' ),
-] );
-register_block_style( 'core/paragraph', [
-	'name'         => 'yst-smallish-light-p',
-	'label'        => __( 'Small-light', 'yoast-block-theme' ),
-] );
-
-register_block_style( 'core/group', [
-	'name'         => 'yst-rounded-border-group',
-	'label'        => __( 'Rounded-bordered', 'yoast-block-theme' ),
-] );
-register_block_style( 'core/group', [
-	'name'         => 'yst-padded-round-group',
-	'label'        => __( 'Round & padded', 'yoast-block-theme' ),
-] );
